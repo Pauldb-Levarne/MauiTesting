@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIHamatTest.MainPage"
+             xmlns:local="clr-namespace:MAUIHamatTest.ViewModels"
+             WidthRequest="1920"
+             HeightRequest="1080">
+
+    <ContentPage.BindingContext>
+        <local:DashboardViewModel />
+    </ContentPage.BindingContext>
+    <Grid BackgroundColor="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Frame CornerRadius="10" BackgroundColor="White" Margin="20" BorderColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <!-- add more rows -->
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <!-- add more columns -->
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding OrderItem.Operator}"
+       TextColor="Black"
+       Grid.Row="0"
+       FontSize="Medium"
+       LineBreakMode="WordWrap"
+       MaxLines="1" />
+                    <Label Text="{Binding OrderItem.ItemColor}"
+       Grid.Row="1"
+
+       TextColor="Black"
+       FontSize="Medium"
+       LineBreakMode="WordWrap"
+       MaxLines="1" />
+                    <Label Text="{Binding OrderItem.LabelFormat}"
+       Grid.Row="2"
+
+       TextColor="Black"
+       FontSize="Medium"
+       LineBreakMode="WordWrap"
+       MaxLines="1" />
+                    <Label Text="{Binding OrderItem.Quantity}"
+       Grid.Row="3"
+       TextColor="Black"
+       FontSize="Medium"
+       LineBreakMode="WordWrap"
+       MaxLines="1" />
+                                        <Label Text="{Binding OrderItem.QuantityRemaining}"
+       Grid.Row="4"
+       TextColor="Black"
+       FontSize="Medium"
+       LineBreakMode="WordWrap"
+       MaxLines="1" />
+                </Grid>
+
+
+            </Frame>
+            <Frame CornerRadius="10" BackgroundColor="Black" Margin="20" BorderColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <!-- add more rows -->
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <!-- add more columns -->
+                    </Grid.ColumnDefinitions>
+                    <!-- add grid content -->
+                </Grid>
+
+            </Frame>
+
+        </StackLayout>
+    </Grid>
+
+
+
+
+
+
+
+
+
+</ContentPage>
+
